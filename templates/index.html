@@ -1,0 +1,74 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
+</head>
+<body>
+    <form action="{{ url_for('index') }}" method="POST"> <!--vsechna data z post se dostanou jako retezec!!! znamena, ze se posilaji vysledky na adresu index. data jsou ulozena v request.form jako [{jmeno:value}, {jmeno:value}], if request.method=="POST"-->
+        <h1>Vyhledávač fimů</h1>
+        <p>Získejte přehledný seznam filmů pro vámi zvolený den a stanice České televize. </p>
+        <div>
+            <label class="label" for="genre">
+                Žánr:
+            </label>
+            <select id="genre" name="genre">
+                <option value="Filmy">Filmy</option> <!--Values dat rovnou na hodnoty, ktere se pouziji ve vyhledavani FILMY...-->
+                <option value="Seriály">Seriály</option>
+                <option value="Dokumenty">Dokumenty</option>
+            </select>
+        </div>
+        <div>
+            <label class="label" for="date">Datum:</label>
+            <input type="date" id="date" name="date" max="{{ max_date }}"> <!--Vracena hodnota je ve formatu yyyy-mm-dd-->
+        </div>
+        <div>
+        <fieldset>
+            <legend>Televizní stanice</legend>
+                <ul>
+                    <li>
+                        <label for="ct1">
+                            <input type="checkbox" checked id="ct1" name="channel" value="ct1"> <!--value je hodota, ktera se odesle s formularem pokud je zaklikly cudlik. posle se dvojice name:value-->
+                            ČT1
+                        </label>
+                    </li>
+                    <li>
+                        <label for="ct2">
+                            <input type="checkbox" id="ct2" name="channel" value="ct2">
+                            ČT2
+                        </label>
+                    </li>
+                    <li>
+                        <label for="ct4">
+                            <input type="checkbox" id="ct4" name="channel" value="ct4">
+                            ČT sport
+                        </label>
+                    </li>
+                    <li>
+                        <label for="ct24">
+                            <input type="checkbox" id="ct24" name="channel" value="ct24">
+                            ČT24
+                        </label>
+                    </li>
+                    <li>
+                        <label for="ctD">
+                            <input type="checkbox" id="ctD" name="channel" value="ct5">
+                            ČT :D
+                        </label>
+                    </li>
+                    <li>
+                        <label for="ct_art">
+                            <input type="checkbox" id="ct_art" name="channel" value="ct6">
+                            ČT art
+                        </label>
+                    </li>
+                </ul>
+        </fieldset>
+            </div class="button">
+            <button type="submit">VYHLEDAT</button>
+            </div> 
+    </form>
+</body>
+</html>

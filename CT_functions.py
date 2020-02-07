@@ -40,6 +40,8 @@ def find_shows_genre(xml_roots, genre):
 
     found_results = []
     for channel, root in xml_roots.items():
+
+        new_channel = change_channel_name(channel)
         for show in root:
             if show.find('zanr').text == genre:
                 time = show.find('cas').text
@@ -47,7 +49,7 @@ def find_shows_genre(xml_roots, genre):
                     movie_name = branch.find('nazev').text
                     movie_dictionary = {}
                     movie_dictionary.update([('name', movie_name),
-                                             ('channel', channel),
+                                             ('channel', new_channel),
                                              ('time', time)]
                                             )
                     found_results.append(movie_dictionary)
@@ -56,6 +58,10 @@ def find_shows_genre(xml_roots, genre):
     else:
         print(f'There\'s no movie in the TVlisting for today.')
 
+def change_channel_name(channel):
+    """The function changes name of the channel which is then used on web page in left column"""
+    channels_dictionary = {'ct1': "ČT1", 'ct2': 'ČT2', 'ct4': 'ČT sport', 'ct6': 'ČT art', 'ct5': 'ČT :D', 'ct24': 'ČT24'}
+    return channels_dictionary[channel]
 
 def find_hyperlink(soup):
     """It founds the first hyperlink in the section search-films,
@@ -101,3 +107,23 @@ def ask_csfd(found_results):
 def date_reformat(date):
     date_string = datetime.datetime.strptime(date, '%Y-%m-%d')
     return datetime.datetime.strftime(date_string, '%d.%m.%Y')
+
+
+def set_week_day(date):
+    """It sets the day of the week and prints it out together with the date."""
+    week = ["pondělí", "úterý", "středa", "čtvrtek", "pátek",
+            "sobota", "neděle"]
+    day, month, year = date.split('.')
+    modified_date = datetime.date(int(year), int(month), int(day))
+    day_of_week = week[modified_date.weekday()]
+    return f'{day_of_week}, {date}'
+
+
+def change_channel_names(channels_list):
+    """It change the name of the channel from the searching to the name,
+    which is then used on the website with results
+    """
+    channels = {'ct1': "ČT1", 'ct2': 'ČT2', 'ct4': 'ČT sport', 'ct6': 'ČT art', 'ct5': 'ČT :D', 'ct24': 'ČT24'}
+    for channel in channels_list:
+        channels_list[channels_list.index(channel)] = channels[channel]
+    return channels_list

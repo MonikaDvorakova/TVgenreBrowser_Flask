@@ -9,8 +9,9 @@ header {
 }
 
 .left_column {
-    background-color: #03B5AA;
-    color: white;
+    background-color: #FFFFFC;
+    color: #03B5AA;
+    border: 1px, solid, #03B5AA;
 }
 
 .small_info {

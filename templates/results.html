@@ -10,9 +10,11 @@
 </head>
 <body>
     <header class="header m-0 text-center p-3">
-       <h1>Filmy</h1> <!--{{ genre }}-->
-       <h4>5.2.2020</h4>  <!--{{ date }} dat datum do formatu napr utery 5.2.2020-->
-       <h4>CT1 CT2 CT4</h4> <!--{{ channels }}-->
+       <h1>{{ genre }}</h1> <!--{{ genre }}-->
+       <h4>{{ date }}</h4>  <!--{{ date }} dat datum do formatu napr utery 5.2.2020-->
+       {% for channel in channels %}
+            <h4 class="d-inline md-5 pd-5"> {{ channel }} </h4>
+        {% endfor %}
 
     </header>
     {% for show in results %}

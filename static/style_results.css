@@ -1,0 +1,34 @@
+header {
+    border-bottom: 5px solid #F6F930;
+    background-color:  #2F2F2F;
+    color: white;
+}
+
+.name {
+    color: #03B5AA;
+}
+
+.left_column {
+    background-color: #03B5AA;
+    color: white;
+}
+
+.small_info {
+    background-color:  #2F2F2F;
+    color: white;
+}
+
+section {
+    border-bottom: 5px solid #F6F930;
+    color: #2F2F2F;
+}
+
+.rating {
+    font-size: 28;
+    font-weight: bold;
+}
+
+/*.rounded_circle {
+    display: table-cell;
+    vertical-align: middle;
+}*/

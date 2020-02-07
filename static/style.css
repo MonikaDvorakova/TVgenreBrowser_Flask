@@ -1,5 +1,18 @@
+html {
+    box-sizing: border-box;
+  }
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
+
 h1 {
     margin-top: 0;
+    color: #03B5AA;
+    margin: 1em #2F2F2F;
 }
 
 ul {
@@ -12,11 +25,12 @@ ul {
 
 
 form {
-    margin: 0 auto;
-    width: 400px;
-    padding: 1em;
-    border: 1px solid #CCC;
+    margin: 60px auto;
+    width: 450px;
+    padding: 2em;
+    border: 3px solid #2F2F2F;
     border-radius: 1em;
+    background-color: white;
 }
 
 div+div {
@@ -27,7 +41,7 @@ input {
     font: 1em sans-serif;
     width: 250px;
     box-sizing: border-box;
-    border: 1px solid #999;
+    border: 1px solid #2F2F2F;
 }
 
 input[type=checkbox] {
@@ -36,20 +50,114 @@ input[type=checkbox] {
 }
 
 input:focus {
-    border-color: #000;
+    border-color: #D2AB99;
+}
+
+input:invalid {
+    box-shadow: 0 0 5px 1px red;
+}
+  
+input:focus:invalid {
+    box-shadow: none;
 }
 
 fieldset {
     width: 250px;
     box-sizing: border-box;
     margin-left: 4em;
-    border: 1px solid #999;
+    border: 1px solid #2F2F2F;
 }
 
-button {
-    margin: 20px 0 0 5em;
-}
 
 label {
   position: relative;
 }
+
+ body {
+    border-top: 50px solid #2F2F2F;
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #FFFFFC;
+}
+
+section {
+    border-width: 500px;
+    border-top: 5px solid #F6F930;
+    margin: 0px;
+    padding: 0px;
+}
+
+button {
+    margin: 20px 0 0 5em;
+    background-color: #FFFFFC;
+    border: none;
+    color:  #2F2F2F;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    border: 2px solid #2F2F2F;
+}
+
+button:hover {
+    background-color: #F6F930; /* Green */
+    color: #2F2F2F;
+  }
+
+.invalid {
+    box-shadow: 0 0 5px 1px red;
+}
+
+
+.arrowBox{
+    width: 150px;
+    height: 30px;
+    background-color: white;
+    border-color: red;
+    border: 1px solid red;
+    border-radius: 5px;
+    padding: 5px;
+    font-family: sans-serif;
+    font-size: 14px;
+    color: red;
+    text-align: center;
+    margin: 10px;
+    position: relative;
+    left: 4em;
+}
+
+.arrowBox::after {
+    content: ' ';
+    width: 0px;
+    height: 0px;
+    border-top: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-bottom:10px solid red;
+    border-right:10px solid transparent;
+    position: relative;
+    right: 50%;
+    bottom: 100%;
+    margin-bottom: -10px;
+    margin-right: -10px;
+}
+
+.warning {
+    width: 250px;
+    border: 2px solid #f39389;
+    border-radius: 2px;
+    padding: 10px;
+    background-color: #fbd8d4;
+    color: #3b3c40;
+    position: relative;
+    left: 4em;
+
+  }
+
+.hidden {
+    display: none;
+}
+
+/* cerna #000000, seda #FFFFFC, zluta #F6F930, modra #03B5AA, tmavohneda #2F2F2F*/

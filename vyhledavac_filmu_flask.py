@@ -8,6 +8,7 @@ from flask import Flask, render_template, request
 app = Flask(__name__)
 app.config['DEBUG'] = True
 app.static_folder = 'static'
+app.static_folder = 'static'
 
 
 url = "https://www.ceskatelevize.cz/services-old/programme/xml/schedule.php"
@@ -33,3 +34,5 @@ def index():
 
 if __name__ == '__main__':
     app.run()
+
+# pridat funkce na zmenu channels na format ct-sport... datum prevest na utery 25.2....

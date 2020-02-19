@@ -1,6 +1,6 @@
 # TVgenreBrowser_Flask
 
-The program is the web application.
+The program is a web application.
 
 The aim of the program is to find out all TV shows of specific genre (films, series, documentary) for selected day and 
 TV channels of Česká televize and to show the final list of the shows with the corresponding information about particular show

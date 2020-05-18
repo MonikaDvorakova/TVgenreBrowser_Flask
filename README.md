@@ -4,7 +4,7 @@ The program is a web application.
 
 The aim of the program is to find out all TV shows of specific genre (films, series, documentary) for selected day and 
 TV channels of Česká televize and to show the final list of the shows with the corresponding information about particular show
-(time and channel of broadcasting, it short description, rating in the CSFD movie database (https://www.csfd.cz/)...).
+(time and channel of broadcasting, its short description, rating in the CSFD movie database (https://www.csfd.cz/)...).
 The TV listing is provided by Česká televize in XML format on webpage https://www.ceskatelevize.cz/xml/tv-program/
 after registration.
 

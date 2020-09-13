@@ -11,16 +11,17 @@ after registration.
 ## Requirements
 * Python 3
 * requests library
-
-**python -m pip install requests**
+```
+python -m pip install requests
+```
 * Beautiful Soup library
-
-**python -m pip install beautifulsoup4**
-
+```
+python -m pip install beautifulsoup4
+```
 * flask library
-
-**python -m pip install flask**
-
+```
+python -m pip install flask
+```
 ## Authentication
 All requests to the program must be authenticated using your username (registration here:
 https://www.ceskatelevize.cz/xml/tv-program/registrace/).

@@ -42,20 +42,3 @@ form.addEventListener('submit', function (event) {
     }
 })
 
-/*form.addEventListener('submit', function (event) {
-    // if the email field is valid, we let the form submit
-  
-    if(!email.validity.valid) {
-      // If it isn't, we display an appropriate error message
-      showError();
-      // Then we prevent the form from being sent by canceling the event
-      event.preventDefault();
-    }
-  });*/
-
-/* najdu si vsechny input checkboxes, pokud jsou checked.
-pomoci querySelectorAll. To vrati list. Pokud ten je prazdny, tak
-nastavim u fieldset atribute valid na False. Tim by se mela automaticky
-nastavit pseudo trida invalid a melo by se to cele zacervenit. Plus zkusit vybrat
-nejaky alert. Tuto funkci navazat na fieldset, dat tam onchange. Mozna bude fungovat automaticky po submit
-Existuje eventlistener input a submit.*/
